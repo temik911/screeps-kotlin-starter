@@ -1,20 +1,21 @@
 import org._10ne.gradle.rest.RestTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinJsDce
 import org.jetbrains.kotlin.gradle.tasks.Kotlin2JsCompile
-import java.util.*
+import java.util.Base64
 
 plugins {
-    id("kotlin2js") version "1.3.31"
-    id("kotlin-dce-js") version "1.3.31"
+    id("kotlin2js") version "1.3.50"
+    id("kotlin-dce-js") version "1.3.50"
     id("org.tenne.rest") version "0.4.2"
 }
 
 repositories {
     jcenter()
+    mavenLocal()
 }
 
 dependencies {
-    implementation("ch.delconte.screeps-kotlin:screeps-kotlin-types:1.3.0")
+    implementation("ch.delconte.screeps-kotlin:screeps-kotlin-types:1.6.2")
     implementation(kotlin("stdlib-js"))
     testImplementation(kotlin("test-js"))
 }
